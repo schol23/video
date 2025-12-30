@@ -2,63 +2,85 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Video</title>
 
 <style>
-body {
-    margin: 0;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+html, body{
+  margin:0;
+  padding:0;
+  background:#000;
+  height:100%;
+  overflow:hidden;
 }
-
-#container {
-    position: relative;
-    width: 100%;
-    max-width: 480px;
+#container{
+  position:fixed;
+  inset:0;
+  width:100vw;
+  height:100dvh;
+  background:#000;
 }
-
-iframe {
-    width: 100%;
-    height: 260px;
-    border: none;
+#video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
 }
-
-#btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: red;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 10;
-    border: none;
+#overlay{
+  position:absolute;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  -webkit-tap-highlight-color:transparent;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+#btn{
+  background:red;
+  color:#fff;
+  font-size:22px;
+  padding:18px 30px;
+  border-radius:12px;
+  font-weight:800;
+  cursor:pointer;
+  user-select:none;
+  animation:pulse 1.2s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+  100%{transform:scale(1)}
 }
 </style>
 </head>
 
 <body>
-
 <div id="container">
-    <iframe src="https://streamable.com/gayi1j" allowfullscreen></iframe>
 
-    <button id="btn" onclick="goAd()">▶ VER VIDEO</button>
+  <iframe
+    id="video"
+    src="https://streamable.com/e/gayi1j"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <div id="overlay">
+    <div id="btn">▶ VER VIDEO</div>
+  </div>
+
 </div>
 
 <script>
-function goAd() {
-    window.open("https://www.effectivegatecpm.com/ay0m0p2ff?key=ecb3055dbbfdf93aaaba73d2f643084c", "_blank");
-    document.getElementById("btn").style.display = "none";
-}
-</script>
+  const AD = "https://www.effectivegatecpm.com/ay0m0p2ff?key=ecb3055dbbfdf93aaaba73d2f643084c";
+  const overlay = document.getElementById("overlay");
 
+  overlay.addEventListener("click", () => {
+    window.open(AD, "_blank", "noopener,noreferrer");
+    overlay.remove(); // se quita al primer click
+  }, { passive: true });
+</script>
 </body>
 </html>
