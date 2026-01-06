@@ -6,63 +6,141 @@
 <title>Video</title>
 
 <style>
-body{
-    margin:0;
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-height:100%;
+  background:#000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:#fff;
+  font-family:Arial, sans-serif;
 }
 
-#container{
-    position:relative;
-    width:100%;
-    max-width:420px;
-    height:90vh;
-    overflow:hidden;
+/* BANNERS */
+.banner{
+  width:300px;
+  height:250px;
+  margin:12px auto;
+  position:relative;
+  z-index:1;
 }
 
+/* CONTENEDOR VIDEO */
+.container{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  height:70vh;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2;
+}
+
+/* VIDEO */
 video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:#000;
 }
 
-#btn{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:rgba(255,0,0,0.95);
-    color:#fff;
-    padding:18px 36px;
+/* BOTÓN */
+.btn{
+  position:absolute;
+  z-index:3;
+  padding:16px 30px;
+  background:#e60000;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* TEXTO */
+.label{
+  font-size:14px;
+  color:#ccc;
+  margin:10px 0;
+  text-align:center;
+}
+
+/* MOBILE: VIDEO MÁS GRANDE */
+@media (max-width: 768px){
+  .container{
+    height:85vh;
+  }
+  .btn{
     font-size:20px;
-    font-weight:bold;
-    border-radius:50px;
-    border:none;
-    cursor:pointer;
-    z-index:999;
+    padding:18px 34px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div id="container">
-    <video controls playsinline>
-        <source src="https://videoscool.b-cdn.net/xaJBOVB01.mp4" type="video/mp4">
-    </video>
+<!-- BANNER SUPERIOR (CPM BASE) -->
+<div class="banner">
+<script>
+  atOptions = {
+    'key' : '3db485c287de05b8e921e488d0d06278',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/3db485c287de05b8e921e488d0d06278/invoke.js"></script>
+</div>
 
-    <button id="btn" onclick="goAd()">▶ VER VIDEO</button>
+<!-- VIDEO + BOTÓN -->
+<div class="container">
+  <video controls playsinline preload="metadata">
+    <source src="https://videoscool.b-cdn.net/xaJBOVB01.mp4" type="video/mp4">
+  </video>
+
+  <button class="btn" id="cta">CONTINUAR ▶</button>
 </div>
 
 <script>
-function goAd(){
-    window.open("https://www.effectivegatecpm.com/nxwb0wi3g3?key=ae88eaae5d982247ce3d81225492598a","_blank");
-    document.getElementById("btn").style.display="none";
-}
+document.getElementById('cta').addEventListener('click',function(){
+  window.open(
+    'https://www.effectivegatecpm.com/gukkpafe?key=e73b72f1cbf0cdfda8f6ae3f4072063f',
+    '_blank'
+  );
+  this.style.display='none';
+});
 </script>
+
+<!-- BANNER INFERIOR (CPM EXTRA) -->
+<div class="banner">
+<script>
+  atOptions = {
+    'key' : '2e18efca35edbeca73d6b0c729a7971b',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/2e18efca35edbeca73d6b0c729a7971b/invoke.js"></script>
+</div>
+
+<!-- TEXTO CONTEXTO -->
+<div class="label">Contenido recomendado</div>
+
+<!-- NATIVE BANNER -->
+<script async="async" data-cfasync="false"
+  src="https://pl28413504.effectivegatecpm.com/a7a5a1664de0b06e9085943763f957c5/invoke.js">
+</script>
+<div id="container-a7a5a1664de0b06e9085943763f957c5"></div>
 
 </body>
 </html>
