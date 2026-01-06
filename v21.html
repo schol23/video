@@ -21,6 +21,14 @@ body{
     max-width:420px;
     height:90vh;
     overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+#iframe-box{
+    position:relative;
+    width:100%;
+    flex:1;
 }
 
 iframe{
@@ -47,20 +55,54 @@ iframe{
     cursor:pointer;
     z-index:999;
 }
+
+/* Banner */
+#ad-banner{
+    width:100%;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:6px 0;
+}
 </style>
 </head>
 
 <body>
 
 <div id="container">
-    <iframe src="https://es.xhamster.com/videos/mostrandose-cocinando-xhrW5Oh" allowfullscreen></iframe>
 
-    <button id="btn" onclick="goAd()">▶ VER VIDEO</button>
+    <div id="iframe-box">
+        <iframe 
+          src="https://es.xhamster.com/videos/mostrandose-cocinando-xhrW5Oh" 
+          allowfullscreen>
+        </iframe>
+
+        <button id="btn" onclick="goAd()">▶ VER VIDEO</button>
+    </div>
+
+    <!-- BANNER ADSTERRA -->
+    <div id="ad-banner">
+        <script>
+          atOptions = {
+            'key' : '0ee8c57842ce465d43d5ea18df015100',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/0ee8c57842ce465d43d5ea18df015100/invoke.js"></script>
+    </div>
+
 </div>
 
 <script>
 function goAd(){
-    window.open("https://www.effectivegatecpm.com/mftg6pks?key=59024367e0d46117605d8b79798efed0","_blank");
+    window.open(
+      "https://www.effectivegatecpm.com/mftg6pks?key=59024367e0d46117605d8b79798efed0",
+      "_blank"
+    );
     document.getElementById("btn").style.display="none";
 }
 </script>
