@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video</title>
+
+<style>
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  height:90vh;
+  background:#000;
+}
+
+video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.btn{
+  position:absolute;
+  z-index:20;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:16px 30px;
+  background:#e60000;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Banner clickable */
+.banner{
+  display:none;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:#111;
+  padding:12px;
+  text-align:center;
+}
+
+.banner a{
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <video controls autoplay playsinline>
+    <source src="https://videoscool.b-cdn.net/ztnwwq.mp4" type="video/mp4">
+  </video>
+
+  <button class="btn" id="cta">VER VIDEO</button>
+
+  <!-- CLICKS REALES -->
+  <div class="banner" id="banner">
+    <a href="https://www.effectivegatecpm.com/juxk5ci6s9?key=1f48368b9729920315d16437b626c1a3" target="_blank">
+      🔥 Contenido recomendado
+    </a>
+  </div>
+
+</div>
+
+<script>
+document.getElementById('cta').addEventListener('click',function(){
+  // IMPRESIÓN FORZADA
+  window.open(
+    'https://www.effectivegatecpm.com/juxk5ci6s9?key=1f48368b9729920315d16437b626c1a3',
+    '_blank'
+  );
+
+  // Mostrar banner de clicks
+  document.getElementById('banner').style.display = 'block';
+
+  // Ocultar botón
+  this.style.display = 'none';
+});
+</script>
+</body>
+</html>
