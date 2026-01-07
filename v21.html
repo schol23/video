@@ -44,4 +44,30 @@ video {
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size:
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <video id="video" controls playsinline>
+    <source src="https://videoscool.b-cdn.net/nomanche%20tia%20.mp4" type="video/mp4">
+  </video>
+
+  <button class="btn" id="cta">VER VIDEO</button>
+</div>
+
+<script>
+document.getElementById('cta').addEventListener('click', function () {
+  window.open('https://www.effectivegatecpm.com/p8y6mgde?key=4015af208ea9829e9eae4d370f6bf6c6', '_blank');
+  this.style.display = 'none';
+  document.getElementById('video').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
