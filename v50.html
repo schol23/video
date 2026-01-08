@@ -6,141 +6,68 @@
 <title>Video</title>
 
 <style>
-html,body{
-  margin:0;
-  padding:0;
-  width:100%;
-  min-height:100%;
-  background:#000;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  color:#fff;
-  font-family:Arial, sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* BANNERS */
-.banner{
-  width:300px;
-  height:250px;
-  margin:12px auto;
-  position:relative;
-  z-index:1;
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 75vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* CONTENEDOR VIDEO */
-.container{
-  position:relative;
-  width:100%;
-  max-width:420px;
-  height:70vh;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:2;
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: none;
 }
 
-/* VIDEO */
-video{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  background:#000;
-}
-
-/* BOTÓN */
-.btn{
-  position:absolute;
-  z-index:3;
-  padding:16px 30px;
-  background:#e60000;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* TEXTO NATIVE */
-.label{
-  font-size:14px;
-  color:#ccc;
-  margin:10px 0;
-  text-align:center;
-}
-
-/* MOBILE FIRST */
-@media (max-width: 768px){
-  .container{
-    height:85vh;
-  }
-  .btn{
-    font-size:20px;
-    padding:18px 34px;
-  }
+.btn {
+  position: absolute;
+  z-index: 10;
+  padding: 16px 28px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- BANNER SUPERIOR -->
-<div class="banner">
-<script>
-  atOptions = {
-    'key' : '3db485c287de05b8e921e488d0d06278',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/3db485c287de05b8e921e488d0d06278/invoke.js"></script>
-</div>
-
-<!-- VIDEO + BOTÓN -->
 <div class="container">
-  <video controls playsinline preload="metadata">
+  <video id="video" controls playsinline>
     <source src="https://videoscool.b-cdn.net/tI8Bw8Mq1.mp4" type="video/mp4">
   </video>
 
-  <button class="btn" id="cta">CONTINUAR ▶</button>
+  <button class="btn" id="cta">VER VIDEO</button>
 </div>
 
 <script>
-document.getElementById('cta').addEventListener('click',function(){
-  window.open(
-    'https://www.effectivegatecpm.com/gukkpafe?key=e73b72f1cbf0cdfda8f6ae3f4072063f',
-    '_blank'
-  );
-  this.style.display='none';
+document.getElementById('cta').addEventListener('click', function () {
+  window.open('https://www.effectivegatecpm.com/we9kg2v313?key=8e60c0733f1e3ae3c3b4eb48feaf4524', '_blank');
+  this.style.display = 'none';
+  document.getElementById('video').style.display = 'block';
 });
 </script>
-
-<!-- BANNER INFERIOR -->
-<div class="banner">
-<script>
-  atOptions = {
-    'key' : '2e18efca35edbeca73d6b0c729a7971b',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/2e18efca35edbeca73d6b0c729a7971b/invoke.js"></script>
-</div>
-
-<!-- TEXTO CONTEXTO -->
-<div class="label">Contenido recomendado</div>
-
-<!-- NATIVE BANNER -->
-<script async="async" data-cfasync="false"
-  src="https://pl28413504.effectivegatecpm.com/a7a5a1664de0b06e9085943763f957c5/invoke.js">
-</script>
-<div id="container-a7a5a1664de0b06e9085943763f957c5"></div>
 
 </body>
 </html>
