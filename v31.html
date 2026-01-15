@@ -5,63 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video</title>
 
+
 <style>
-body{
-    margin:0;
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#container{
-    position:relative;
-    width:100%;
-    max-width:420px;
-    height:90vh;
-    overflow:hidden;
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 75vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: none;
 }
 
-#btn{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:rgba(255,0,0,0.95);
-    color:#fff;
-    padding:18px 36px;
-    font-size:20px;
-    font-weight:bold;
-    border-radius:50px;
-    border:none;
-    cursor:pointer;
-    z-index:999;
+.btn {
+  position: absolute;
+  z-index: 10;
+  padding: 16px 28px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<div id="container">
-    <video controls playsinline>
-        <source src="https://noti.b-cdn.net/V10.mp4" type="video/mp4">
-    </video>
+<div class="container">
+  <video id="video" controls playsinline>
+    <source src="https://noti.b-cdn.net/V10.mp4">
+  </video>
 
-    <button id="btn" onclick="goAd()">▶ VER VIDEO</button>
+  <button class="btn" id="cta">VER VIDEO</button>
 </div>
 
 <script>
-function goAd(){
-    window.open("https://www.effectivegatecpm.com/reufx0mw4y?key=5290aba4629ab80af0f7652778013deb","_blank");
-    document.getElementById("btn").style.display="none";
-}
+document.getElementById('cta').addEventListener('click', function () {
+  window.open('https://www.effectivegatecpm.com/reufx0mw4y?key=5290aba4629ab80af0f7652778013deb', '_blank');
+  this.style.display = 'none';
+  document.getElementById('video').style.display = 'block';
+});
 </script>
 
 </body>
