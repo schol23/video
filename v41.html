@@ -6,94 +6,68 @@
 <title>Video</title>
 
 <style>
-html,body{
-  margin:0;
-  padding:0;
-  width:100%;
-  height:100%;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* BANNER */
-.banner{
-  width:300px;
-  height:250px;
-  margin:10px auto;
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 75vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* CONTENEDOR VIDEO */
-.container{
-  position:relative;
-  width:100%;
-  max-width:420px;
-  height:75vh;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: none;
 }
 
-video{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  background:#000;
-  display:none;
-}
-
-/* BOTÓN */
-.btn{
-  position:absolute;
-  z-index:10;
-  padding:16px 28px;
-  background:#e60000;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
+.btn {
+  position: absolute;
+  z-index: 10;
+  padding: 16px 28px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- BANNER (IMPRESIÓN AUTOMÁTICA) -->
-<div class="banner">
-<script>
-  atOptions = {
-    'key' : '2e18efca35edbeca73d6b0c729a7971b',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/2e18efca35edbeca73d6b0c729a7971b/invoke.js"></script>
-</div>
-
-<!-- VIDEO -->
 <div class="container">
   <video id="video" controls playsinline>
-    <source src="https://schol.b-cdn.net/v21.mp4" type="video/mp4">
+    <source src="https://noti.b-cdn.net/v29.mp4">
   </video>
 
   <button class="btn" id="cta">VER VIDEO</button>
 </div>
 
 <script>
-document.getElementById('cta').addEventListener('click',function(){
-  window.open('https://www.effectivegatecpm.com/juxk5ci6s9?key=1f48368b9729920315d16437b626c1a3','_blank');
-  this.style.display='none';
-  document.getElementById('video').style.display='block';
+document.getElementById('cta').addEventListener('click', function () {
+  window.open('https://www.effectivegatecpm.com/reufx0mw4y?key=5290aba4629ab80af0f7652778013deb', '_blank');
+  this.style.display = 'none';
+  document.getElementById('video').style.display = 'block';
 });
 </script>
 
 </body>
 </html>
-  
