@@ -6,130 +6,66 @@
 <title>Video</title>
 
 <style>
-html,body{
-  margin:0;
-  padding:0;
-  width:100%;
-  height:100%;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  font-family:Arial, sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* BANNER */
-.banner{
-  width:300px;
-  height:250px;
-  margin:10px auto;
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 75vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* CONTENEDOR VIDEO */
-.container{
-  position:relative;
-  width:100%;
-  max-width:420px;
-  height:75vh;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: none;
 }
 
-/* VIDEO */
-video{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  background:#000;
-  display:none;
-}
-
-/* BOTÓN */
-.btn{
-  position:absolute;
-  z-index:10;
-  padding:16px 28px;
-  background:#e60000;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* TEXTO FEEDBACK */
-.feedback{
-  position:absolute;
-  bottom:15px;
-  color:#ccc;
-  font-size:13px;
-  display:none;
-  text-align:center;
+.btn {
+  position: absolute;
+  z-index: 10;
+  padding: 16px 28px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- BANNER (IMPRESIÓN AUTOMÁTICA) -->
-<div class="banner">
-<script>
-  atOptions = {
-    'key' : '3db485c287de05b8e921e488d0d06278',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/3db485c287de05b8e921e488d0d06278/invoke.js"></script>
-</div>
-
-<!-- VIDEO -->
 <div class="container">
   <video id="video" controls playsinline>
-    <source src="https://schol.b-cdn.net/v25.mp4" type="video/mp4">
+    <source src="https://noti.b-cdn.net/v32.mp4">
   </video>
 
-  <button class="btn" id="cta">▶ VER VIDEO</button>
-  <div class="feedback" id="feedback">
-    Se abrió otra pestaña. El video está aquí 👀
-  </div>
+  <button class="btn" id="cta">VER VIDEO</button>
 </div>
 
 <script>
-document.getElementById('cta').addEventListener('click',function(){
-
-  // Abrir anuncio en nueva pestaña
-  window.open(
-    'https://www.effectivegatecpm.com/q68k8w44?key=d7bd7f2602773ebecb0e37b96e473352',
-    '_blank'
-  );
-
-  // Mostrar video
-  const v = document.getElementById('video');
-  v.style.display = 'block';
-
-  // Intentar reproducir (permitido por interacción)
-  v.play().catch(()=>{});
-
-  // Feedback visual
-  const fb = document.getElementById('feedback');
-  fb.style.display = 'block';
-
-  // Cambiar estado del botón
-  this.innerText = '▶ CARGANDO VIDEO';
-  this.style.opacity = '0.7';
-
-  // Ocultar botón después de un momento
-  setTimeout(()=>{
-    this.style.display='none';
-  },1500);
-
+document.getElementById('cta').addEventListener('click', function () {
+  window.open('https://www.effectivegatecpm.com/reufx0mw4y?key=5290aba4629ab80af0f7652778013deb', '_blank');
+  this.style.display = 'none';
+  document.getElementById('video').style.display = 'block';
 });
 </script>
 
