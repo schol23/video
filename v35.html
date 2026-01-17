@@ -28,11 +28,10 @@ html, body {
   align-items: center;
 }
 
-video {
+iframe {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: #000;
+  border: 0;
   display: none;
 }
 
@@ -54,19 +53,25 @@ video {
 <body>
 
 <div class="container">
-  <video id="video" controls playsinline>
-    <source src="https://streamtape.com/e/GPPRKzl0bvSde0“
-type="video/mp4">
-  </video>
+  <iframe
+    id="player"
+    src="https://streamtape.com/e/GPPRKzl0bvSde0"
+    allowfullscreen
+    allow="autoplay">
+  </iframe>
 
   <button class="btn" id="cta">VER VIDEO</button>
 </div>
 
 <script>
 document.getElementById('cta').addEventListener('click', function () {
-  window.open('https://www.effectivegatecpm.com/reufx0mw4y?key=5290aba4629ab80af0f7652778013deb', '_blank');
+  window.open(
+    'https://www.effectivegatecpm.com/reufx0mw4y?key=5290aba4629ab80af0f7652778013deb',
+    '_blank'
+  );
+
   this.style.display = 'none';
-  document.getElementById('video').style.display = 'block';
+  document.getElementById('player').style.display = 'block';
 });
 </script>
 
