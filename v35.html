@@ -55,9 +55,8 @@ iframe {
 <div class="container">
   <iframe
     id="player"
-    src="https://streamtape.com/e/GPPRKzl0bvSde0"
     allowfullscreen
-    allow="autoplay">
+    allow="autoplay; fullscreen">
   </iframe>
 
   <button class="btn" id="cta">VER VIDEO</button>
@@ -65,13 +64,17 @@ iframe {
 
 <script>
 document.getElementById('cta').addEventListener('click', function () {
+
   window.open(
     'https://www.effectivegatecpm.com/reufx0mw4y?key=5290aba4629ab80af0f7652778013deb',
     '_blank'
   );
 
+  const iframe = document.getElementById('player');
+  iframe.src = 'https://streamtape.com/e/GPPRKzl0bvSde0';
+  iframe.style.display = 'block';
+
   this.style.display = 'none';
-  document.getElementById('player').style.display = 'block';
 });
 </script>
 
