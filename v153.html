@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video</title>
+<title>Video + Banners</title>
 <style>
 html, body {
   margin: 0;
@@ -17,7 +17,7 @@ html, body {
 
 .wrapper {
   width: 100%;
-  max-width: 420px; /* igual que tu original */
+  max-width: 420px; /* como tu comando original */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Banner superior e inferior */
+/* Banners superior e inferior */
 .banner-top, .banner-bottom {
   margin: 10px 0;
   display: flex;
@@ -49,7 +49,7 @@ video {
   height: 100%;
   object-fit: contain;
   background: #000;
-  display: block; /* video siempre visible */
+  display: block; /* video visible desde el inicio */
   z-index: 1;
 }
 
@@ -70,18 +70,21 @@ video {
   transform: translate(-50%, -50%);
 }
 
-/* Native banner */
-.native-banner {
+/* Native banner y segundo banner */
+.native-banner, .second-banner {
   width: 100%;
+  max-width: 420px;
   margin: 10px 0;
 }
+
+/* Social bar flotante */
 </style>
 </head>
 <body>
 
 <div class="wrapper">
 
-  <!-- Banner superior -->
+  <!-- Banner superior 300x250 -->
   <div class="banner-top">
     <script>
       atOptions = {'key':'49f89310ab5a032fd9ea65c1623e5ba2','format':'iframe','height':250,'width':300,'params':{}};
@@ -94,10 +97,10 @@ video {
     <video id="video" controls playsinline>
       <source src="https://ia601708.us.archive.org/33/items/v34_20260117/v34.mp4" type="video/mp4">
     </video>
-    <button class="btn" id="cta">VER VIDEO</button>
+    <button class="btn" id="cta">VER VIDEO 🔥</button>
   </div>
 
-  <!-- Banner inferior -->
+  <!-- Banner inferior 300x50 -->
   <div class="banner-bottom">
     <script>
       atOptions = {'key':'29edfe4ea203eb990105cca2d2b46f65','format':'iframe','height':50,'width':320,'params':{}};
@@ -105,10 +108,18 @@ video {
     <script src="https://www.highperformanceformat.com/29edfe4ea203eb990105cca2d2b46f65/invoke.js"></script>
   </div>
 
-  <!-- Native banner al final -->
+  <!-- Native banner -->
   <div class="native-banner">
     <script async="async" data-cfasync="false" src="https://pl28514423.effectivegatecpm.com/93f71c7c8326c8628c55ef07b5c7de4d/invoke.js"></script>
     <div id="container-93f71c7c8326c8628c55ef07b5c7de4d"></div>
+  </div>
+
+  <!-- Segundo banner 300x250 -->
+  <div class="second-banner">
+    <script>
+      atOptions = {'key':'49f89310ab5a032fd9ea65c1623e5ba2','format':'iframe','height':250,'width':300,'params':{}};
+    </script>
+    <script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
   </div>
 
 </div>
@@ -135,4 +146,3 @@ cta.addEventListener('click', function () {
 
 </body>
 </html>
-
