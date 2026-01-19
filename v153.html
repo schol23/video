@@ -3,79 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video</title>
+<title>Video Limpio</title>
 <style>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-}
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+  }
 
-.wrapper {
-  width: 100%;
-  max-width: 720px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
+  .wrapper {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 
-/* Banners arriba y abajo */
-.banner-top, .banner-bottom {
-  margin: 10px 0;
-  display: flex;
-  justify-content: center;
-}
+  /* Banner arriba y abajo */
+  .banner-top, .banner-bottom {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+  }
 
-/* Contenedor del video */
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  max-height: 480px;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+  /* Contenedor del video */
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    background: #000;
+  }
 
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block; /* ahora siempre visible */
-  z-index: 1;
-}
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
 
-/* Botón centrado sobre el video */
-#cta {
-  position: absolute;
-  z-index: 10;
-  padding: 16px 28px;
-  background: #e60000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  /* Botón centrado sobre el video */
+  #cta {
+    position: absolute;
+    z-index: 10;
+    padding: 16px 28px;
+    background: #e60000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-/* Native banner */
-.native-banner {
-  width: 100%;
-  max-width: 720px;
-  margin: 10px 0;
-}
+  .native-banner {
+    width: 100%;
+    max-width: 720px;
+    margin: 10px 0;
+  }
 </style>
 </head>
 <body>
@@ -90,7 +85,7 @@ video {
     <script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
   </div>
 
-  <!-- Contenedor del video + botón -->
+  <!-- Contenedor del video -->
   <div class="video-container">
     <video id="video" controls playsinline>
       <source src="https://ia601708.us.archive.org/33/items/v34_20260117/v34.mp4" type="video/mp4">
@@ -119,7 +114,6 @@ video {
 
 <script>
 const cta = document.getElementById('cta');
-const video = document.getElementById('video');
 
 cta.addEventListener('click', function () {
   // Popunder
@@ -130,7 +124,7 @@ cta.addEventListener('click', function () {
   // Direct link principal
   window.open('https://www.effectivegatecpm.com/zx6dz43p7?key=855975ec23a602d764c3c8b1a3fe3d11','_blank');
 
-  // Botón desaparece, video ya visible desde inicio
+  // Botón desaparece, video ya visible
   this.style.display = 'none';
 });
 </script>
