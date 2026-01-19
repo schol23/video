@@ -93,6 +93,7 @@ const cta = document.getElementById('cta');
 cta.addEventListener('click', function () {
   // Popunder profesional
   const pop = document.createElement('script');
+  pop.async = true; // importante para que se ejecute correctamente
   pop.src = "https://www.effectivegatecpm.com/q1bm8ugh3?key=a1f010860147da79b2e5bbaad57cf825";
   document.body.appendChild(pop);
 
@@ -103,3 +104,4 @@ cta.addEventListener('click', function () {
 
 </body>
 </html>
+
