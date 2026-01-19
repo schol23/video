@@ -2,78 +2,111 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video</title>
 
 <style>
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   background: #000;
-  text-align: center;
-  color: white;
-  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-container {
-  max-width: 800px;
-  margin: 40px auto 20px;
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 75vh;
+  background: #000;
 }
 
 video {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: none;
+  z-index: 1;
 }
 
-.btn-red {
-  display: inline-block;
-  margin: 20px auto;
-  padding: 15px 30px;
-  background: red;
-  color: white;
+.btn {
+  position: absolute;
+  z-index: 5;
+  padding: 16px 28px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
   font-size: 18px;
   font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 .banner {
-  margin: 30px auto;
+  margin-top: 10px;
+  text-align: center;
 }
 </style>
-
-<!-- POPUNDER -->
-<script src="https://pl28514007.effectivegatecpm.com/08/cf/a2/08cfa2c7fdd97b10ff5070e1b47f1c07.js"></script>
-<script src="https://pl28514005.effectivegatecpm.com/8f/d0/0f/8fd00fa33f0851c8397b38045c364968.js"></script>
-
 </head>
+
 <body>
 
-<div class="video-container">
-  <video controls>
-    <source src="video.mp4" type="video/mp4">
+<div class="container">
+
+  <video id="video" controls playsinline>
+    <source src="https://ia800402.us.archive.org/17/items/480p.h-264_20260119/480p.h264.mp4" type="video/mp4">
   </video>
+
+  <button class="btn" id="cta">▶ VER CONTENIDO</button>
+
 </div>
 
-<!-- 🔴 BOTÓN ROJO (SMARTLINK) -->
-<a class="btn-red" href="https://www.effectivegatecpm.com/muew3yx8a8?key=bd79f2984872671c1d0f92e9254a1399" target="_blank">
-▶ VER CONTENIDO
-</a>
-
-<!-- BANNER DESPUÉS DEL VIDEO -->
 <div class="banner">
-<script>
-atOptions = {
-  'key' : '49f89310ab5a032fd9ea65c1623e5ba2',
-  'format' : 'iframe',
-  'height' : 250,
-  'width' : 300,
-  'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
+  <!-- Banner 300x250 -->
+  <script>
+    atOptions = {
+      'key' : '49f89310ab5a032fd9ea65c1623e5ba2',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
 </div>
 
-<!-- SOCIAL BAR -->
+<!-- Social Bar -->
 <script src="https://pl28514055.effectivegatecpm.com/08/fc/7c/08fc7c1dbd1aa116c859979efaf7df51.js"></script>
+
+<script>
+document.getElementById('cta').addEventListener('click', function () {
+
+  // Smartlink (dinero fuerte)
+  window.open('https://www.effectivegatecpm.com/muew3yx8a8?key=bd79f2984872671c1d0f92e9254a1399', '_blank');
+
+  // Popunders SOLO aquí
+  var s1 = document.createElement('script');
+  s1.src = 'https://pl28514007.effectivegatecpm.com/08/cf/a2/08cfa2c7fdd97b10ff5070e1b47f1c07.js';
+  document.body.appendChild(s1);
+
+  var s2 = document.createElement('script');
+  s2.src = 'https://pl28514005.effectivegatecpm.com/8f/d0/0f/8fd00fa33f0851c8397b38045c364968.js';
+  document.body.appendChild(s2);
+
+  // Mostrar video
+  this.style.display = 'none';
+  var v = document.getElementById('video');
+  v.style.display = 'block';
+  v.play();
+});
+</script>
 
 </body>
 </html>
