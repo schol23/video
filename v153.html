@@ -36,7 +36,7 @@ html, body {
 .video-container {
   position: relative;
   width: 100%;
-  height: 60vh; /* Ajustable según pantalla */
+  height: 60vh;
   max-height: 480px;
   background: #000;
   display: flex;
@@ -49,7 +49,7 @@ video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: none;
+  display: block; /* ahora siempre visible */
   z-index: 1;
 }
 
@@ -82,7 +82,7 @@ video {
 
 <div class="wrapper">
 
-  <!-- Banner superior (solo 1) -->
+  <!-- Banner superior -->
   <div class="banner-top">
     <script>
       atOptions = {'key':'49f89310ab5a032fd9ea65c1623e5ba2','format':'iframe','height':250,'width':300,'params':{}};
@@ -98,7 +98,7 @@ video {
     <button id="cta">VER VIDEO 🔥</button>
   </div>
 
-  <!-- Banner inferior (solo 1) -->
+  <!-- Banner inferior -->
   <div class="banner-bottom">
     <script>
       atOptions = {'key':'29edfe4ea203eb990105cca2d2b46f65','format':'iframe','height':50,'width':320,'params':{}};
@@ -130,9 +130,8 @@ cta.addEventListener('click', function () {
   // Direct link principal
   window.open('https://www.effectivegatecpm.com/zx6dz43p7?key=855975ec23a602d764c3c8b1a3fe3d11','_blank');
 
-  // Mostrar video
+  // Botón desaparece, video ya visible desde inicio
   this.style.display = 'none';
-  video.style.display = 'block';
 });
 </script>
 
