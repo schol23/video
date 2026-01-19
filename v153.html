@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video</title>
 
+<!-- POPUNDER 1 -->
+<script src="https://pl28514007.effectivegatecpm.com/08/cf/a2/08cfa2c7fdd97b10ff5070e1b47f1c07.js"></script>
+
+<!-- POPUNDER 2 -->
+<script src="https://pl28514005.effectivegatecpm.com/8f/d0/0f/8fd00fa33f0851c8397b38045c364968.js"></script>
+
+<!-- SOCIAL BAR -->
+<script src="https://pl28514055.effectivegatecpm.com/08/fc/7c/08fc7c1dbd1aa116c859979efaf7df51.js"></script>
+
 <style>
 html, body {
   margin: 0;
@@ -14,127 +23,106 @@ html, body {
   background: #000;
   display: flex;
   justify-content: center;
-}
-
-.page {
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 .container {
   position: relative;
   width: 100%;
+  max-width: 420px;
   height: 75vh;
   background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #000;
   display: none;
 }
 
 .btn {
   position: absolute;
+  inset: 0;
   z-index: 10;
-  padding: 16px 28px;
   background: #e60000;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* BANNERS */
-.banner-desktop {
-  display: none;
-  margin-top: 8px;
-}
-.banner-mobile {
-  display: none;
-  margin-top: 8px;
-}
-
-@media (min-width: 481px) {
-  .banner-desktop { display: block; }
-}
-@media (max-width: 480px) {
-  .banner-mobile { display: block; }
+#adMobile, #adDesktop {
+  text-align: center;
+  margin-top: 6px;
 }
 </style>
-
-<!-- POPUNDERS -->
-<script src="https://pl28514007.effectivegatecpm.com/08/cf/a2/08cfa2c7fdd97b10ff5070e1b47f1c07.js"></script>
-<script src="https://pl28514005.effectivegatecpm.com/8f/d0/0f/8fd00fa33f0851c8397b38045c364968.js"></script>
-
-<!-- SOCIAL BAR -->
-<script src="https://pl28514055.effectivegatecpm.com/08/fc/7c/08fc7c1dbd1aa116c859979efaf7df51.js"></script>
-
 </head>
 
 <body>
 
-<div class="page">
+<div class="container">
+  <video id="video" controls playsinline>
+    <source src="https://ia800402.us.archive.org/17/items/480p.h-264_20260119/480p.h264.mp4">
+  </video>
 
-  <div class="container">
-    <video id="video" controls playsinline>
-      <source src="https://ia800402.us.archive.org/17/items/480p.h-264_20260119/480p.h264.mp4" type="video/mp4">
-    </video>
-    <button class="btn" id="cta">VER VIDEO</button>
-  </div>
+  <!-- BOTÓN ORIGINAL -->
+  <button class="btn" id="cta">VER VIDEO</button>
+</div>
 
-  <!-- DESKTOP BANNER 300x250 -->
-  <div class="banner-desktop">
-    <script>
-      atOptions = {
-        'key' : '49f89310ab5a032fd9ea65c1623e5ba2',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
-  </div>
+<!-- BANNER MOBILE -->
+<div id="adMobile" style="display:none;">
+<script>
+atOptions = {
+  'key' : '29edfe4ea203eb990105cca2d2b46f65',
+  'format' : 'iframe',
+  'height' : 50,
+  'width' : 320,
+  'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/29edfe4ea203eb990105cca2d2b46f65/invoke.js"></script>
+</div>
 
-  <!-- MOBILE BANNER 320x50 -->
-  <div class="banner-mobile">
-    <script>
-      atOptions = {
-        'key' : '29edfe4ea203eb990105cca2d2b46f65',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/29edfe4ea203eb990105cca2d2b46f65/invoke.js"></script>
-  </div>
-
+<!-- BANNER DESKTOP -->
+<div id="adDesktop" style="display:none;">
+<script>
+atOptions = {
+  'key' : '49f89310ab5a032fd9ea65c1623e5ba2',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
 </div>
 
 <script>
-// ROTACIÓN SMARTLINK (BOTÓN)
-var smartlinks = [
-  'https://www.effectivegatecpm.com/muew3yx8a8?key=bd79f2984872671c1d0f92e9254a1399',
-  'https://www.effectivegatecpm.com/b7rbppanm?key=80de847eb08be503c7bc66ddafe92201'
-];
+let clicks = 0;
 
+// CLICK DEL BOTÓN (SMARTLINK PRINCIPAL)
 document.getElementById('cta').addEventListener('click', function () {
-  var smart = smartlinks[Math.floor(Math.random() * smartlinks.length)];
-  window.open(smart, '_blank');
+  window.open('https://www.effectivegatecpm.com/muew3yx8a8?key=bd79f2984872671c1d0f92e9254a1399', '_blank');
+
   this.style.display = 'none';
   document.getElementById('video').style.display = 'block';
+
+  if (window.innerWidth <= 480) {
+    document.getElementById('adMobile').style.display = 'block';
+  } else {
+    document.getElementById('adDesktop').style.display = 'block';
+  }
+});
+
+// POPUNDERS EN INTERACCIONES SEPARADAS
+document.addEventListener('click', function () {
+  clicks++;
+
+  if (clicks === 2) {
+    window.open('https://www.effectivegatecpm.com/b7rbppanm?key=80de847eb08be503c7bc66ddafe92201', '_blank');
+  }
 });
 </script>
 
