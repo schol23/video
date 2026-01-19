@@ -32,15 +32,24 @@ video { width:100%; height:auto; object-fit:contain; background:#000; display:bl
 </div>
 
 <script>
-document.getElementById('cta').addEventListener('click', function () {
-  var pop = document.createElement('script');
-  pop.src = "https://www.effectivegatecpm.com/q1bm8ugh3?key=a1f010860147da79b2e5bbaad57cf825";
+const cta = document.getElementById('cta');
+
+cta.addEventListener('click', function () {
+  // Popunder
+  const pop = document.createElement('script');
+  pop.src = "https://pl28514005.effectivegatecpm.com/8f/d0/0f/8fd00fa33f0851c8397b38045c364968.js";
   document.body.appendChild(pop);
+
+  // Link principal Adsterra
+  window.open('https://www.effectivegatecpm.com/q1bm8ugh3?key=a1f010860147da79b2e5bbaad57cf825','_blank');
+
+  // Oculta el botón
   this.style.display = 'none';
 });
 </script>
 
 </body>
 </html>
+
 
 
