@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video</title>
-
+<title>Video + Banners</title>
 <style>
 html, body {
   margin: 0;
@@ -14,14 +13,31 @@ html, body {
   background: #000;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
+.wrapper {
+  width: 100%;
+  max-width: 420px; /* como tu comando original */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Banners superior e inferior */
+.banner-top, .banner-bottom {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+/* Contenedor del video */
 .container {
   position: relative;
   width: 100%;
-  max-width: 420px;
-  height: 75vh;
+  height: 75vh; /* igual que tu original */
   background: #000;
   display: flex;
   justify-content: center;
@@ -33,9 +49,11 @@ video {
   height: 100%;
   object-fit: contain;
   background: #000;
-  display: none;
+  display: block; /* video visible desde el inicio */
+  z-index: 1;
 }
 
+/* Botón centrado sobre el video */
 .btn {
   position: absolute;
   z-index: 10;
@@ -47,27 +65,85 @@ video {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+/* Native banner y segundo banner */
+.native-banner, .second-banner {
+  width: 100%;
+  max-width: 420px;
+  margin: 10px 0;
+}
+
+/* Social bar flotante */
 </style>
 </head>
-
 <body>
 
-<div class="container">
-  <video id="video" controls playsinline>
-    <source src="https://ia601701.us.archive.org/34/items/v81_20260117/v81.mp4" type="video/mp4">
-  </video>
+<div class="wrapper">
 
-  <button class="btn" id="cta">VER VIDEO</button>
+  <!-- Banner superior 300x250 -->
+  <div class="banner-top">
+    <script>
+      atOptions = {'key':'49f89310ab5a032fd9ea65c1623e5ba2','format':'iframe','height':250,'width':300,'params':{}};
+    </script>
+    <script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
+  </div>
+
+  <!-- Contenedor del video -->
+  <div class="container">
+    <video id="video" controls playsinline>
+      <source src="https://ia601701.us.archive.org/34/items/v81_20260117/v81.mp4" type="video/mp4">
+    </video>
+    <button class="btn" id="cta">VER VIDEO 🔥</button>
+  </div>
+
+  <!-- Banner inferior 300x50 -->
+  <div class="banner-bottom">
+    <script>
+      atOptions = {'key':'29edfe4ea203eb990105cca2d2b46f65','format':'iframe','height':50,'width':320,'params':{}};
+    </script>
+    <script src="https://www.highperformanceformat.com/29edfe4ea203eb990105cca2d2b46f65/invoke.js"></script>
+  </div>
+
+  <!-- Native banner -->
+  <div class="native-banner">
+    <script async="async" data-cfasync="false" src="https://pl28514423.effectivegatecpm.com/93f71c7c8326c8628c55ef07b5c7de4d/invoke.js"></script>
+    <div id="container-93f71c7c8326c8628c55ef07b5c7de4d"></div>
+  </div>
+
+  <!-- Segundo banner 300x250 -->
+  <div class="second-banner">
+    <script>
+      atOptions = {'key':'49f89310ab5a032fd9ea65c1623e5ba2','format':'iframe','height':250,'width':300,'params':{}};
+    </script>
+    <script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
+  </div>
+
 </div>
 
+<!-- Social bar flotante -->
+<script src="https://pl28514411.effectivegatecpm.com/2a/cb/8d/2acb8de638bab13e413405e86638354a.js"></script>
+
 <script>
-document.getElementById('cta').addEventListener('click', function () {
-  window.open('https://www.effectivegatecpm.com/aaf0926g?key=e43b674cbe3a382411f94cd68f684e38', '_blank');
+const cta = document.getElementById('cta');
+
+cta.addEventListener('click', function () {
+  // Popunder
+  const pop = document.createElement('script');
+  pop.src = "https://pl28514005.effectivegatecpm.com/8f/d0/0f/8fd00fa33f0851c8397b38045c364968.js";
+  document.body.appendChild(pop);
+
+  // Direct link principal
+  window.open('https://www.effectivegatecpm.com/zx6dz43p7?key=855975ec23a602d764c3c8b1a3fe3d11','_blank');
+
+  // Botón desaparece
   this.style.display = 'none';
-  document.getElementById('video').style.display = 'block';
 });
 </script>
 
 </body>
 </html>
+
