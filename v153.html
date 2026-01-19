@@ -36,12 +36,13 @@ html, body {
 .video-container {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 60vh; /* Ajustable según pantalla */
   max-height: 480px;
   background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 video {
@@ -49,6 +50,7 @@ video {
   height: 100%;
   object-fit: contain;
   display: none;
+  z-index: 1;
 }
 
 /* Botón centrado sobre el video */
@@ -80,7 +82,7 @@ video {
 
 <div class="wrapper">
 
-  <!-- Banner superior -->
+  <!-- Banner superior (solo 1) -->
   <div class="banner-top">
     <script>
       atOptions = {'key':'49f89310ab5a032fd9ea65c1623e5ba2','format':'iframe','height':250,'width':300,'params':{}};
@@ -96,7 +98,7 @@ video {
     <button id="cta">VER VIDEO 🔥</button>
   </div>
 
-  <!-- Banner inferior -->
+  <!-- Banner inferior (solo 1) -->
   <div class="banner-bottom">
     <script>
       atOptions = {'key':'29edfe4ea203eb990105cca2d2b46f65','format':'iframe','height':50,'width':320,'params':{}};
@@ -104,18 +106,10 @@ video {
     <script src="https://www.highperformanceformat.com/29edfe4ea203eb990105cca2d2b46f65/invoke.js"></script>
   </div>
 
-  <!-- Native banner -->
+  <!-- Native banner al final -->
   <div class="native-banner">
     <script async="async" data-cfasync="false" src="https://pl28514423.effectivegatecpm.com/93f71c7c8326c8628c55ef07b5c7de4d/invoke.js"></script>
     <div id="container-93f71c7c8326c8628c55ef07b5c7de4d"></div>
-  </div>
-
-  <!-- Segundo banner 300x250 al final -->
-  <div class="banner-bottom">
-    <script>
-      atOptions = {'key':'49f89310ab5a032fd9ea65c1623e5ba2','format':'iframe','height':250,'width':300,'params':{}};
-    </script>
-    <script src="https://www.highperformanceformat.com/49f89310ab5a032fd9ea65c1623e5ba2/invoke.js"></script>
   </div>
 
 </div>
