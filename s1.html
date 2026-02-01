@@ -54,7 +54,7 @@ video {
 
 <div class="container">
   <video id="video" controls playsinline>
-    <source src="http://62.171.189.22/videos/f14" type="video/mp4">
+    <source src="http://62.171.189.22/videos/f14.mp4" type="video/mp4">
   </video>
 
   <button class="btn" id="cta">VER VIDEO</button>
@@ -69,13 +69,12 @@ document.getElementById('cta').addEventListener('click', function () {
     '_blank'
   );
 
-  // muestra y reproduce el video
-  this.style.display = 'none';
-  const video = document.getElementById('video');
-  video.style.display = 'block';
-  video.play();
+  // fallback directo al video
+  window.location.href = 'http://62.171.189.22/videos/f14.mp4';
+
 });
 </script>
 
 </body>
 </html>
+
